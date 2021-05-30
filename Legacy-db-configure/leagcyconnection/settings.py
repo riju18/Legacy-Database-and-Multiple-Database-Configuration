@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'LegacyApi',
+    'LegacyApiNonDjango',
 ]
 
 MIDDLEWARE = [
@@ -80,6 +81,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'DjangoConnection2',
+        'USER': 'postgres',
+        'PASSWORD': 'maxvox000346',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    },
+    'nondjangopostgre': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'DvdRental',
         'USER': 'postgres',
         'PASSWORD': 'maxvox000346',
         'HOST': '127.0.0.1',
