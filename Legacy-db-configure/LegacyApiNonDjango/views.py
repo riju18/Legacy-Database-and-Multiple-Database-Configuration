@@ -9,7 +9,7 @@ class LegacyActorViewSet(viewsets.GenericViewSet,
     queryset = Actor.objects.using('nondjangopostgre').all()
 
     def get_queryset(self):
-        actor_id = self.request.query_params.get('id')
-        if actor_id:
-            return self.queryset.filter(id=actor_id)
+        actor = self.request.query_params.get('id')
+        if actor:
+            return self.queryset.filter(actor_id=actor)
         return self.queryset
